@@ -18,11 +18,17 @@ Aiming to answer questions like:
 
 ## Datasets
 Data will be collected using the following sources:
-- Pytrends for Google Trends (to track Google searches about trending movies at certain times)
-- Reddit API (to observe social media engagement and discussions around certain movies and how they changed over time: r/movies, r/Letterboxd, r/TrueFilm.)
-- TMDb (The Movie Database) API (data of trending movies, genres and dates over certain time periods)
-- Rotten Tomatoes API (data of critic scores vs. how the movie is perceived bt the general public)
-- IMDb API (general information about the movies, rating, release dates and box office)
+- Google Trends: to track Google searches about trending movies at certain times
+  - search data over time will be retrieved via Pytrends using pytrends library on Python and stored on pandas
+- Reddit: to observe social media engagement and discussions around certain movies and how they changed over time on subreddits r/movies, r/Letterboxd, r/TrueFilm.
+  - Reddit Pushshift Archives: to collect bulk historical data
+  - PRAW API: PRAW (Reddit official API) library on Python for recent engagement data on certain subreddits and including certain keywords
+- TMDb (The Movie Database): data of trending movies, genres and dates over certain time periods
+  - retrieved via TMDb API Key for Non Commercial Use and installment of the wrapper [tmdbsimple](https://github.com/celiao/tmdbsimple.git) by celiao for Python 
+- Rotten Tomatoes: data of critic scores vs. how the movie is perceived bt the general public
+  - Installment of the library [rottentomatoes](https://github.com/preritdas/rottentomatoes-python.git) for Python by preritdas to access both critic rating and audience scores
+- IMDb: general information about the movies, rating, release dates and box office performance
+  - IMDb Non Commercial Datasets will be downloaded from the official IMDb Developer website: including data of ratings and general information (genre, release date..) about the movies
 
 ## Data Analysis
 - Tracking popularity of movie trends over time.
