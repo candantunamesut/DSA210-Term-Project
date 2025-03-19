@@ -16,6 +16,7 @@ Aiming to answer questions like:
 - **Hypothesis 1 (H1):** Engagement on social media and search engines, seasonal trends, and critic/audience ratings are all factors that significantly impact a movie's popularity and revenue.
 
 ## Datasets
+The project will feature the following data:
 - movie-title
 - genre: genre of the movie
 - tmdb-popularity: a movie’s popularity score that is based on user ratings, searches and overall interaction
