@@ -1,0 +1,10 @@
+python-dotenv
+scikit-learn
+nltk
+textblob
+matplotlib
+pandas
+pytrends
+tmdbsimple
+omdb
+requests
