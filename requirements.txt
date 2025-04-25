@@ -1,10 +1,7 @@
-python-dotenv
-scikit-learn
-nltk
-textblob
-matplotlib
 pandas
+numpy
+seaborn
+matplotlib
 pytrends
-tmdbsimple
-omdb
+scipy
 requests
