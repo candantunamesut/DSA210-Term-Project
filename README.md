@@ -13,14 +13,17 @@ Aiming to answer questions like:
 ## **Hypotheses:**
 ### Critic score (tomatoMeter) & box office revenue:
 H0: There is no significant relationship between critic score and box office revenue.
+
 Ha: There is a significant relationship between critic score and box office revenue.
 
 ### Audience score & box office revenue:
 H0: There is no significant relationship between audience score and box office revenue.
+
 Ha: There is a significant relationship between audience score and box office revenue.
 
 ### Seasonal trends:
 H0: There is no significant difference in popularity of genres across seasons.
+
 Ha: There is a significant difference in popularity of genres across seasons.
 
 ## Datasets
@@ -58,14 +61,14 @@ In order to understand if a movie’s ratings correlate with how high their box 
 ### Results: 
 
 Pearson correlation was found to be:
-- Between audience score & box office revenue: 0.08
+- Between audience score & box office revenue: 0.08156687119640989
     - which means there was a weak positive correlation between the two values.
-- Between critic score & box office revenue: -0.01
+- Between critic score & box office revenue: -0.007389732900618732
     - which means there was no correlation between the two values.
 
 P-value was found to be:
-- For audience score & box office revenue: 
-- For critic score & box office revenue: 
+- For audience score & box office revenue: 1.0992317632510033e-17
+- For critic score & box office revenue: 0.4386315890202529
 Comparing these values with α = 0.05: we can reject the null hypothesis for the audience score-box office revenue test whereas we cannot reject the null hypothesis for the critic score-box office test. There is a significant relationship between audience rating and box office revenue meanwhile there is no significant relationship between critic scores and box office revenue.
 
 Additionally, on the correlation heatmap, we can observe the pearson correlation between audience score and critic score to be 0.64: which indicates a strong positive correlation between the two values. 
@@ -78,7 +81,8 @@ The dataset originally consisted of over 140k+ movies; and cleaning out empty/mi
 
 In order to understand the relationship between seasonal-annual events/days and movie genre popularity, Google Trends’ search popularity data of genres was retrieved using the Python library pytrends. A dataset containing values of over 130 thousand movies, their scores, genres, box office revenue values (and more) scrapped by user Andrea Milla from the website Rotten Tomatoes was retrieved from Kaggle and used in the experiment. The correlation values of both scores were compared with a heatmap to examine if there is indeed any relation. The hypotheses of the experiment were tested using ANOVA. 
 
-### Results: 
+### Results:
+For every genre that we retrieved data for, winter was the season with most searches- its count being 14 while the other seasons' counts were 13. There was no difference between genres' popularity when grouped according to seasons. On the other hand, popularity of genres differed when evaluated between different months. 
 
 ### Limitations & challenges: 
 The greatest challenge in testing the relation between seasons/annual important dates and movie genres’ popularity was how frequently the system failed to fetch the requested data due to Google Trends’ 429 (TooManyRequests) error. My first approach to discover if there is an existing seasonal trend amongst genres was to request information from Google Trends for every single movie in the Rotten Tomatoes Movies dataset, but this approach proved to be unachievable due to how great the number of movies the dataset consisted of was. I moved on to requesting search data for genres instead, and used the Rotten Tomatoes dataset to create a list of movie genres and fetched data for these genres. Though the number was down from 130k+ to 20-30, the issue still persisted, and I had to move on to a retry based code to ensure I could retrieve data for the most number of genres possible. Genre names had to be cleaned due to special characters and NaN values corrupting data. Despite using the retry based mechanism, I had to improvise using sleep time as well to not overexhaust the system and prevent Trends from flagging my IP adress. Using the retry mechanism and delay times together, in the last retrieval attempt dated 25/04/2025, I was able to retrieve data for 33 out of 34 genres which left out data for only the “Sports & Fitness” genre. This was the most successful attempt and took 49 minutes and 6 seconds. Additionally, to prevent the context of search keywords and retrieving data of non-movies, I added the keyword “movies” to the end of the genre names retrieved from the Rotten Tomatoes dataset. 
