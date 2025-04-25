@@ -1,0 +1,397 @@
+genre,month,value
+action,1,78.0
+action,2,79.75
+action,3,77.4
+action,4,76.0
+action,5,75.0
+action,6,78.2
+action,7,77.0
+action,8,77.25
+action,9,70.8
+action,10,69.0
+action,11,72.0
+action,12,83.83333333333333
+adventure,1,80.5
+adventure,2,78.5
+adventure,3,77.8
+adventure,4,79.75
+adventure,5,83.5
+adventure,6,81.8
+adventure,7,82.75
+adventure,8,83.25
+adventure,9,75.6
+adventure,10,71.25
+adventure,11,71.25
+adventure,12,81.33333333333333
+animation,1,84.25
+animation,2,84.75
+animation,3,82.2
+animation,4,83.75
+animation,5,82.0
+animation,6,79.2
+animation,7,81.0
+animation,8,76.0
+animation,9,72.0
+animation,10,77.5
+animation,11,80.0
+animation,12,88.5
+anime,1,84.75
+anime,2,81.5
+anime,3,87.8
+anime,4,85.25
+anime,5,90.0
+anime,6,87.0
+anime,7,89.75
+anime,8,84.0
+anime,9,84.0
+anime,10,80.75
+anime,11,81.0
+anime,12,91.0
+biography,1,84.75
+biography,2,74.5
+biography,3,67.0
+biography,4,68.75
+biography,5,69.5
+biography,6,66.8
+biography,7,71.5
+biography,8,73.0
+biography,9,75.0
+biography,10,65.75
+biography,11,66.5
+biography,12,78.16666666666667
+comedy,1,74.5
+comedy,2,71.75
+comedy,3,69.4
+comedy,4,67.5
+comedy,5,70.5
+comedy,6,69.8
+comedy,7,70.75
+comedy,8,71.5
+comedy,9,64.8
+comedy,10,66.0
+comedy,11,67.75
+comedy,12,78.33333333333333
+crime,1,80.5
+crime,2,75.5
+crime,3,76.0
+crime,4,75.75
+crime,5,75.75
+crime,6,77.6
+crime,7,83.0
+crime,8,83.5
+crime,9,80.0
+crime,10,78.75
+crime,11,74.25
+crime,12,82.83333333333333
+documentary,1,76.5
+documentary,2,74.5
+documentary,3,80.2
+documentary,4,65.5
+documentary,5,60.75
+documentary,6,65.0
+documentary,7,59.75
+documentary,8,63.0
+documentary,9,72.6
+documentary,10,65.5
+documentary,11,67.0
+documentary,12,73.5
+drama,1,71.5
+drama,2,70.75
+drama,3,72.8
+drama,4,71.5
+drama,5,74.0
+drama,6,76.6
+drama,7,76.0
+drama,8,78.0
+drama,9,72.4
+drama,10,70.25
+drama,11,75.75
+drama,12,80.16666666666667
+entertainment,1,76.25
+entertainment,2,80.0
+entertainment,3,78.4
+entertainment,4,78.5
+entertainment,5,78.75
+entertainment,6,85.2
+entertainment,7,93.75
+entertainment,8,88.75
+entertainment,9,82.6
+entertainment,10,79.0
+entertainment,11,79.5
+entertainment,12,89.16666666666667
+fantasy,1,85.0
+fantasy,2,80.75
+fantasy,3,83.6
+fantasy,4,77.0
+fantasy,5,78.25
+fantasy,6,83.4
+fantasy,7,89.5
+fantasy,8,92.75
+fantasy,9,87.8
+fantasy,10,80.25
+fantasy,11,79.5
+fantasy,12,85.83333333333333
+foreign,1,80.5
+foreign,2,82.5
+foreign,3,78.0
+foreign,4,76.75
+foreign,5,73.75
+foreign,6,68.8
+foreign,7,72.75
+foreign,8,72.25
+foreign,9,73.2
+foreign,10,75.0
+foreign,11,72.75
+foreign,12,86.83333333333333
+gay  lesbian,1,47.0
+gay  lesbian,2,48.0
+gay  lesbian,3,51.4
+gay  lesbian,4,46.0
+gay  lesbian,5,60.0
+gay  lesbian,6,49.4
+gay  lesbian,7,43.75
+gay  lesbian,8,54.25
+gay  lesbian,9,51.0
+gay  lesbian,10,55.5
+gay  lesbian,11,64.0
+gay  lesbian,12,71.33333333333333
+history,1,85.0
+history,2,91.75
+history,3,77.4
+history,4,71.5
+history,5,73.25
+history,6,64.6
+history,7,65.0
+history,8,73.0
+history,9,72.6
+history,10,73.75
+history,11,68.75
+history,12,74.83333333333333
+holiday,1,10.5
+holiday,2,8.5
+holiday,3,8.6
+holiday,4,8.25
+holiday,5,7.75
+holiday,6,8.8
+holiday,7,9.25
+holiday,8,10.0
+holiday,9,10.8
+holiday,10,15.25
+holiday,11,46.25
+holiday,12,64.0
+horror,1,48.0
+horror,2,47.5
+horror,3,51.2
+horror,4,52.75
+horror,5,56.0
+horror,6,60.8
+horror,7,59.75
+horror,8,58.75
+horror,9,61.8
+horror,10,84.75
+horror,11,49.75
+horror,12,53.833333333333336
+kids  family,1,58.25
+kids  family,2,57.0
+kids  family,3,56.2
+kids  family,4,52.5
+kids  family,5,59.5
+kids  family,6,62.4
+kids  family,7,57.75
+kids  family,8,59.0
+kids  family,9,58.2
+kids  family,10,78.25
+kids  family,11,64.0
+kids  family,12,72.83333333333333
+lgbtq,1,69.75
+lgbtq,2,73.25
+lgbtq,3,65.4
+lgbtq,4,59.5
+lgbtq,5,72.0
+lgbtq,6,88.6
+lgbtq,7,67.5
+lgbtq,8,58.75
+lgbtq,9,60.4
+lgbtq,10,65.0
+lgbtq,11,75.5
+lgbtq,12,85.0
+music,1,89.25
+music,2,91.0
+music,3,88.0
+music,4,90.75
+music,5,82.75
+music,6,80.4
+music,7,81.75
+music,8,88.25
+music,9,90.8
+music,10,91.75
+music,11,90.25
+music,12,97.0
+musical,1,79.25
+musical,2,72.0
+musical,3,66.2
+musical,4,62.75
+musical,5,58.75
+musical,6,57.4
+musical,7,57.5
+musical,8,64.25
+musical,9,65.2
+musical,10,67.5
+musical,11,78.0
+musical,12,85.0
+mystery  thriller,1,80.5
+mystery  thriller,2,75.75
+mystery  thriller,3,74.8
+mystery  thriller,4,72.75
+mystery  thriller,5,78.0
+mystery  thriller,6,74.0
+mystery  thriller,7,77.25
+mystery  thriller,8,77.25
+mystery  thriller,9,70.2
+mystery  thriller,10,67.0
+mystery  thriller,11,70.75
+mystery  thriller,12,80.33333333333333
+nature,1,28.5
+nature,2,31.75
+nature,3,31.2
+nature,4,32.5
+nature,5,52.25
+nature,6,70.4
+nature,7,41.5
+nature,8,38.75
+nature,9,37.4
+nature,10,36.5
+nature,11,27.5
+nature,12,28.166666666666668
+news,1,78.0
+news,2,74.25
+news,3,71.6
+news,4,68.0
+news,5,68.25
+news,6,71.2
+news,7,91.0
+news,8,90.0
+news,9,82.2
+news,10,76.5
+news,11,71.5
+news,12,83.16666666666667
+other,1,81.25
+other,2,78.25
+other,3,77.4
+other,4,74.25
+other,5,71.0
+other,6,69.8
+other,7,74.75
+other,8,85.5
+other,9,78.2
+other,10,83.25
+other,11,80.75
+other,12,90.0
+romance,1,70.25
+romance,2,72.5
+romance,3,61.4
+romance,4,67.25
+romance,5,69.25
+romance,6,73.2
+romance,7,73.0
+romance,8,72.5
+romance,9,63.2
+romance,10,67.0
+romance,11,72.25
+romance,12,83.83333333333333
+science fiction,1,86.5
+science fiction,2,90.25
+science fiction,3,87.4
+science fiction,4,84.0
+science fiction,5,82.75
+science fiction,6,72.6
+science fiction,7,75.75
+science fiction,8,77.25
+science fiction,9,80.2
+science fiction,10,81.5
+science fiction,11,77.5
+science fiction,12,85.66666666666667
+short,1,67.0
+short,2,68.5
+short,3,66.2
+short,4,66.5
+short,5,65.25
+short,6,63.0
+short,7,65.25
+short,8,72.5
+short,9,72.6
+short,10,75.75
+short,11,72.25
+short,12,83.0
+special interest,1,0.0
+special interest,2,25.0
+special interest,3,0.0
+special interest,4,0.0
+special interest,5,0.0
+special interest,6,16.2
+special interest,7,0.0
+special interest,8,0.0
+special interest,9,0.0
+special interest,10,0.0
+special interest,11,0.0
+special interest,12,0.0
+sports,1,86.75
+sports,2,86.75
+sports,3,83.2
+sports,4,83.25
+sports,5,83.75
+sports,6,81.4
+sports,7,82.0
+sports,8,89.0
+sports,9,80.2
+sports,10,78.5
+sports,11,78.25
+sports,12,89.33333333333333
+standup,1,82.0
+standup,2,0.0
+standup,3,12.8
+standup,4,30.5
+standup,5,0.0
+standup,6,0.0
+standup,7,0.0
+standup,8,19.75
+standup,9,26.2
+standup,10,16.5
+standup,11,68.0
+standup,12,40.333333333333336
+variety,1,27.25
+variety,2,24.75
+variety,3,27.0
+variety,4,30.25
+variety,5,24.0
+variety,6,21.2
+variety,7,18.25
+variety,8,22.75
+variety,9,24.4
+variety,10,57.75
+variety,11,27.5
+variety,12,33.833333333333336
+war,1,67.5
+war,2,69.75
+war,3,66.2
+war,4,91.75
+war,5,88.25
+war,6,75.0
+war,7,68.5
+war,8,72.5
+war,9,63.8
+war,10,59.75
+war,11,66.5
+war,12,77.83333333333333
+western,1,82.5
+western,2,83.0
+western,3,78.2
+western,4,75.0
+western,5,75.0
+western,6,81.4
+western,7,80.5
+western,8,81.25
+western,9,75.8
+western,10,72.0
+western,11,78.75
+western,12,85.66666666666667
