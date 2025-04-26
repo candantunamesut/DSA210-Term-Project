@@ -1,0 +1,34 @@
+Genre,F Statistic,P-Value,Seasonal ANOVA Result:
+adventure,5.333060275718178,0.0029298530432518674,There is a significant difference.
+drama,1.3263714825374306,0.27650044922886796,No significant difference.
+romance,7.411343165879052,0.00034468454284713253,There is a significant difference.
+documentary,4.610460923875281,0.006411777650037847,There is a significant difference.
+mystery  thriller,3.678375481668322,0.0181346506023356,There is a significant difference.
+action,7.129251067263712,0.00045647435562151396,There is a significant difference.
+comedy,4.06691240901902,0.011710832385882943,There is a significant difference.
+kids  family,2.194654694507108,0.10052229700993202,No significant difference.
+horror,7.483624517463267,0.00032089787180266516,There is a significant difference.
+biography,7.392503482335065,0.00035117994993947346,There is a significant difference.
+fantasy,3.229727946720472,0.030244086635830992,There is a significant difference.
+lgbtq,3.137883668147297,0.033609315659413934,There is a significant difference.
+musical,15.852544135939151,2.4596486367581887e-07,There is a significant difference.
+science fiction,11.716163213587764,6.6316908503488344e-06,There is a significant difference.
+western,7.583263900575024,0.0002908661854571423,There is a significant difference.
+anime,2.9543826948202256,0.04152657847277343,There is a significant difference.
+animation,11.570299860576334,7.51018404441988e-06,There is a significant difference.
+holiday,4.858345837376664,0.004889937521739329,There is a significant difference.
+war,8.189552064488355,0.00016120270444983307,There is a significant difference.
+music,14.446885194783947,7.183845136289622e-07,There is a significant difference.
+standup,3.0287352005777413,0.03811122063171252,There is a significant difference.
+variety,3.590168690229987,0.02004241865140058,There is a significant difference.
+nature,8.328813110567467,0.00014102471080437842,There is a significant difference.
+short,7.149762713679755,0.0004472011028098602,There is a significant difference.
+sports,8.217600302311352,0.00015691029447134953,There is a significant difference.
+special interest,0.6396690827538002,0.5931283324283715,No significant difference.
+entertainment,6.464697891571044,0.0008951637403675231,There is a significant difference.
+news,6.129384122983351,0.0012654459506234216,There is a significant difference.
+foreign,14.771254690983657,5.586769219488372e-07,There is a significant difference.
+other,7.841350529025663,0.0002258835976438111,There is a significant difference.
+gay  lesbian,1.3638538269759277,0.2648113423360657,No significant difference.
+history,14.010722196911383,1.0114247248303444e-06,There is a significant difference.
+crime,1.9877016910524337,0.12805836906827697,No significant difference.
