@@ -116,11 +116,11 @@ Ha: There is a significant difference in popularity of genres across months.
 - We cannot reject the null hypothesis for the following genres: Adventure, Drama, Mystery Thriller, Comedy, Special Interest, Crime
 
 ### Visualization:
-In order to determine genres with a clear trend of peaking in certain months/seasons, both the results of the monthly ANOVA test and a standard deviation scale above 10 was used. After filtering the resylts in this way, the following genres were found to be following a clear trend: War, Variety, Stand-up, Nature, Musical, LGBTQ+, Kids & Family, Horror, Gay-lesbian and Holiday. These genres were visualized with a line plot of trend over months, and can be found in the results folder of the Seasonal Trends. 
+In order to determine genres with a clear trend of peaking in certain months/seasons, both the results of the monthly ANOVA test and a standard deviation scale above 10 was used. After filtering the resylts in this way, the following genres were found to be following a clear trend: War, Variety, Stand-up, Nature, Musical, LGBTQ+, Kids & Family, Horror, Gay-lesbian and Holiday. These genres were visualized with a line plot of trend over months, and can be found in the results folder of the Seasonal Trends. It's important to note that the peaks could be amplified by releases of certain movies as well. 
 
 Some of the plots are as follows:
 ![image](https://github.com/user-attachments/assets/859d3a93-7137-49f4-b071-8a285bbcbd5b)
-Holiday: 
+Holiday: The holiday genre's peak occuring in December reflects the increasing popularity of Christmas & Holiday themed movies during the period, which the New Years effect heavily impacting global masses contributes to. 
 
 ![horror](https://github.com/user-attachments/assets/2cf71acf-f2e7-4048-8dab-f8c39550eafe)
 Horror: The horror genre peaking in October is likely due to Halloween, which is celebrated globally and is known to cause a peak in popularity in horror-themed products, and corresponds to October 31-November 1 every year. 
@@ -129,13 +129,13 @@ Horror: The horror genre peaking in October is likely due to Halloween, which is
 LGBTQ+: The peak of the genre occurs in June, which is the Pride Month dedicated to honoring LGBTQ+ individuals, and could be directly tied to this annual event. 
 
 ![musical](https://github.com/user-attachments/assets/d03996fc-87b6-454f-ba4f-8e8debc92fdb)
-Musical
+Musical: The peak of the Musical genre is at the end of the year - December and could be caused by year-end shows, new years' musicals and the festival energy surrounding crowds during this period.  
 
 ![nature](https://github.com/user-attachments/assets/db689f6e-8d27-4d43-abc8-31699cc009f2)
-Nature
+Nature: The nature genre seems to peak in June, start of the summer and the warmer months, and the increased interest in natural touristic locations & outdoor activities.
 
 ![war](https://github.com/user-attachments/assets/547ab875-7688-4255-80cf-e86ea1bca0a3)
-War
+War: Interest in war movies peaking in April could be tied to the majority of war movies that are globally popular take the World War I as their main topic and focus on the American side of the war. Other global events annually aligning with this month could also contribute to this data. 
 
 ### Limitations & challenges: 
 The greatest challenge in testing the relation between seasons/annual important dates and movie genres’ popularity was how frequently the system failed to fetch the requested data due to Google Trends’ 429 (TooManyRequests) error. My first approach to discover if there is an existing seasonal trend amongst genres was to request information from Google Trends for every single movie in the Rotten Tomatoes Movies dataset, but this approach proved to be unachievable due to how great the number of movies the dataset consisted of was. I moved on to requesting search data for genres instead, and used the Rotten Tomatoes dataset to create a list of movie genres and fetched data for these genres. Though the number was down from 130k+ to 20-30, the issue still persisted, and I had to move on to a retry based code to ensure I could retrieve data for the most number of genres possible. Genre names had to be cleaned due to special characters and NaN values corrupting data. Despite using the retry based mechanism, I had to improvise using sleep time as well to not overexhaust the system and prevent Trends from flagging my IP adress. Using the retry mechanism and delay times together, in the last retrieval attempt dated 25/04/2025, I was able to retrieve data for 33 out of 34 genres which left out data for only the “Sports & Fitness” genre. This was the most successful attempt and took 49 minutes and 6 seconds. Additionally, to prevent the context of search keywords and retrieving data of non-movies, I added the keyword “movies” to the end of the genre names retrieved from the Rotten Tomatoes dataset. 
