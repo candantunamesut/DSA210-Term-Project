@@ -26,6 +26,11 @@ H0: There is no significant difference in popularity of genres across seasons.
 
 Ha: There is a significant difference in popularity of genres across seasons.
 
+### Monthly trends:
+H0: There is no significant difference in popularity of genres across months.
+
+Ha: There is a significant difference in popularity of genres across months.
+
 ## Datasets
 The project will feature the following data:
 * title: title of movie
@@ -61,22 +66,28 @@ In order to understand if a movie’s ratings correlate with how high their box 
 ### Results: 
 
 Pearson correlation was found to be:
-- Between audience score & box office revenue: 0.08156687119640989
-    - which means there was a weak positive correlation between the two values.
-- Between critic score & box office revenue: -0.007389732900618732
-    - which means there was no correlation between the two values.
+- Between audience score & box office revenue: -0.0901669691353097
+    - which means there is a very weak negative correlation between the two values.
+- Between critic score & box office revenue: -0.24415258620083363
+    - which means there is a weak negative correlation between the two values.
 
 P-value was found to be:
-- For audience score & box office revenue: 1.0992317632510033e-17
-- For critic score & box office revenue: 0.4386315890202529
+- For audience score & box office revenue: 1.248400337443627e-20
+- For critic score & box office revenue: 5.145165271420907e-144
 
-Comparing these values with α = 0.05: we can reject the null hypothesis for the audience score-box office revenue test whereas we cannot reject the null hypothesis for the critic score-box office test. There is a significant relationship between audience rating and box office revenue meanwhile there is no significant relationship between critic scores and box office revenue.
+Comparing these values with α = 0.05: we can reject the null hypothesis for both the audience score-box office revenue test and the critic score-box office test. There is a statistically significant relationship between audience rating and box office revenue and between critic scores and box office revenue.
 
-Additionally, on the correlation heatmap, we can observe the pearson correlation between audience score and critic score to be 0.64: which indicates a strong positive correlation between the two values. 
+Additionally, on the correlation heatmap, we can observe the pearson correlation between audience score and critic score to be 0.58: which indicates a strong positive correlation between the two values. 
+
+### Visualization:
+![image](https://github.com/user-attachments/assets/81bb6817-ffa7-4f02-ac3d-8c4fe50683d0)
+The relationship between audience rating and box office revenue values is statistically significant according to the result of Pearson Correlation test. However, as seen in the regression plot above, the plot values are scattered in all areas of the graph and the correlation they seem to result in is a very weak (and negative) one.
+![image](https://github.com/user-attachments/assets/5ee037f2-cceb-47a6-a672-3f44b5518c37)
+The relationship between critic rating and box office revenue values is also statistically significant according to the result of Pearson Correlation test. Similarly to the audience rating - box office graph, the plot values seem to be even more scattered in all areas of the graph, and it's hard to see a clear trend. This result suggests critic score is not among the significant factors in predicting a movie'S box office success.
+
 
 ### Limitations: 
 The dataset originally consisted of over 140k+ movies; and cleaning out empty/missing values for box office, tomatometer and audience rating columns left out 130k+ movies. This led to some of the dataset not being used. Additionally, some of the movies’ box office revenues were low enough to mean that their rating values might not have been accurate. Due to lack of popularity, a small amount of movies’ tomatometer (critic rating) value is 0, which could be tied to no critics reviewing the movie. This can also be said for movies with a small amount of voters which would affect the audience rating value.
-
 
 ## Seasonal Genre Popularity Trends: 
 
@@ -91,6 +102,16 @@ Ha: There is a significant difference in popularity of genres across seasons.
 
 - We reject the null hypothesis for the following genres: Adventure, Romance, Standup, Variety, Horror, Biography, Documentary, Mystery & Thriller, Action, Comedy, Fantasy, History, LGBTQ+, Musical, Western, Sci-Fi, Animation, Holiday, War, Music, Sports, Entertainment, News, Nature, Short Movies, Foreign and Other. For these genres, there is a significant difference in popularity across seasons.
 - We cannot reject the null hypothesis for the following genres: Drama, Gay/Lesbian, Crime, Kids & Family and Special Interest. For these genres, there is no significant difference in popularity across seasons.
+
+H0: There is no significant difference in popularity of genres across months.
+
+Ha: There is a significant difference in popularity of genres across months.
+
+- We reject the null hypothesis for the following genres: Romance, Documentary, Action, Kids Family, Horror, Biography, Fantasy, LGBTQ+, Musical, Science Fiction, Western, Anime, Animation, Holiday, War, Music, Stand-up, Variety, Nature, Short, Sports, Entertainment, News, Foreign, Other, Gay-Lesbian, History. For these genres, there is a significant difference in popularity across months.
+- We cannot reject the null hypothesis for the following genres: Adventure, Drama, Mystery Thriller, Comedy, Special Interest, Crime
+
+### Visualization:
+
 
 ### Limitations & challenges: 
 The greatest challenge in testing the relation between seasons/annual important dates and movie genres’ popularity was how frequently the system failed to fetch the requested data due to Google Trends’ 429 (TooManyRequests) error. My first approach to discover if there is an existing seasonal trend amongst genres was to request information from Google Trends for every single movie in the Rotten Tomatoes Movies dataset, but this approach proved to be unachievable due to how great the number of movies the dataset consisted of was. I moved on to requesting search data for genres instead, and used the Rotten Tomatoes dataset to create a list of movie genres and fetched data for these genres. Though the number was down from 130k+ to 20-30, the issue still persisted, and I had to move on to a retry based code to ensure I could retrieve data for the most number of genres possible. Genre names had to be cleaned due to special characters and NaN values corrupting data. Despite using the retry based mechanism, I had to improvise using sleep time as well to not overexhaust the system and prevent Trends from flagging my IP adress. Using the retry mechanism and delay times together, in the last retrieval attempt dated 25/04/2025, I was able to retrieve data for 33 out of 34 genres which left out data for only the “Sports & Fitness” genre. This was the most successful attempt and took 49 minutes and 6 seconds. Additionally, to prevent the context of search keywords and retrieving data of non-movies, I added the keyword “movies” to the end of the genre names retrieved from the Rotten Tomatoes dataset. 
