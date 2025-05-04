@@ -120,13 +120,13 @@ In order to determine genres with a clear trend of peaking in certain months/sea
 
 Some of the plots are as follows:
 ![image](https://github.com/user-attachments/assets/859d3a93-7137-49f4-b071-8a285bbcbd5b)
-Holiday
+Holiday: 
 
 ![horror](https://github.com/user-attachments/assets/2cf71acf-f2e7-4048-8dab-f8c39550eafe)
-Horror
+Horror: The horror genre peaking in October is likely due to Halloween, which is celebrated globally and is known to cause a peak in popularity in horror-themed products, and corresponds to October 31-November 1 every year. 
 
 ![lgbtq](https://github.com/user-attachments/assets/587e596d-1287-42a2-b5ca-cbe568514b28)
-LGBTQ
+LGBTQ+: The peak of the genre occurs in June, which is the Pride Month dedicated to honoring LGBTQ+ individuals, and could be directly tied to this annual event. 
 
 ![musical](https://github.com/user-attachments/assets/d03996fc-87b6-454f-ba4f-8e8debc92fdb)
 Musical
