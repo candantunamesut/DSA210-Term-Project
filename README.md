@@ -80,8 +80,11 @@ Comparing these values with α = 0.05: we can reject the null hypothesis for bot
 Additionally, on the correlation heatmap, we can observe the pearson correlation between audience score and critic score to be 0.58: which indicates a strong positive correlation between the two values. 
 
 ### Visualization:
+#### Audience score:
 ![image](https://github.com/user-attachments/assets/81bb6817-ffa7-4f02-ac3d-8c4fe50683d0)
 The relationship between audience rating and box office revenue values is statistically significant according to the result of Pearson Correlation test. However, as seen in the regression plot above, the plot values are scattered in all areas of the graph and the correlation they seem to result in is a very weak (and negative) one.
+
+#### Critic score:
 ![image](https://github.com/user-attachments/assets/5ee037f2-cceb-47a6-a672-3f44b5518c37)
 The relationship between critic rating and box office revenue values is also statistically significant according to the result of Pearson Correlation test. Similarly to the audience rating - box office graph, the plot values seem to be even more scattered in all areas of the graph, and it's hard to see a clear trend. This result suggests critic score is not among the significant factors in predicting a movie'S box office success.
 
@@ -96,6 +99,7 @@ In order to understand the relationship between seasonal-annual events/days and 
 ### Results:
 For every genre that we retrieved data for, winter was the season with most searches- its count being 14 while the other seasons' counts were 13. There was no difference between genres' popularity when grouped according to seasons. On the other hand, popularity of genres differed when evaluated between different months. 
 
+#### Seasonal:
 H0: There is no significant difference in popularity of genres across seasons.
 
 Ha: There is a significant difference in popularity of genres across seasons.
@@ -103,6 +107,7 @@ Ha: There is a significant difference in popularity of genres across seasons.
 - We reject the null hypothesis for the following genres: Adventure, Romance, Standup, Variety, Horror, Biography, Documentary, Mystery & Thriller, Action, Comedy, Fantasy, History, LGBTQ+, Musical, Western, Sci-Fi, Animation, Holiday, War, Music, Sports, Entertainment, News, Nature, Short Movies, Foreign and Other. For these genres, there is a significant difference in popularity across seasons.
 - We cannot reject the null hypothesis for the following genres: Drama, Gay/Lesbian, Crime, Kids & Family and Special Interest. For these genres, there is no significant difference in popularity across seasons.
 
+#### Monthly: 
 H0: There is no significant difference in popularity of genres across months.
 
 Ha: There is a significant difference in popularity of genres across months.
@@ -111,7 +116,26 @@ Ha: There is a significant difference in popularity of genres across months.
 - We cannot reject the null hypothesis for the following genres: Adventure, Drama, Mystery Thriller, Comedy, Special Interest, Crime
 
 ### Visualization:
+In order to determine genres with a clear trend of peaking in certain months/seasons, both the results of the monthly ANOVA test and a standard deviation scale above 10 was used. After filtering the resylts in this way, the following genres were found to be following a clear trend: War, Variety, Stand-up, Nature, Musical, LGBTQ+, Kids & Family, Horror, Gay-lesbian and Holiday. These genres were visualized with a line plot of trend over months, and can be found in the results folder of the Seasonal Trends. 
 
+Some of the plots are as follows:
+![image](https://github.com/user-attachments/assets/859d3a93-7137-49f4-b071-8a285bbcbd5b)
+Holiday
+
+![horror](https://github.com/user-attachments/assets/2cf71acf-f2e7-4048-8dab-f8c39550eafe)
+Horror
+
+![lgbtq](https://github.com/user-attachments/assets/587e596d-1287-42a2-b5ca-cbe568514b28)
+LGBTQ
+
+![musical](https://github.com/user-attachments/assets/d03996fc-87b6-454f-ba4f-8e8debc92fdb)
+Musical
+
+![nature](https://github.com/user-attachments/assets/db689f6e-8d27-4d43-abc8-31699cc009f2)
+Nature
+
+![war](https://github.com/user-attachments/assets/547ab875-7688-4255-80cf-e86ea1bca0a3)
+War
 
 ### Limitations & challenges: 
 The greatest challenge in testing the relation between seasons/annual important dates and movie genres’ popularity was how frequently the system failed to fetch the requested data due to Google Trends’ 429 (TooManyRequests) error. My first approach to discover if there is an existing seasonal trend amongst genres was to request information from Google Trends for every single movie in the Rotten Tomatoes Movies dataset, but this approach proved to be unachievable due to how great the number of movies the dataset consisted of was. I moved on to requesting search data for genres instead, and used the Rotten Tomatoes dataset to create a list of movie genres and fetched data for these genres. Though the number was down from 130k+ to 20-30, the issue still persisted, and I had to move on to a retry based code to ensure I could retrieve data for the most number of genres possible. Genre names had to be cleaned due to special characters and NaN values corrupting data. Despite using the retry based mechanism, I had to improvise using sleep time as well to not overexhaust the system and prevent Trends from flagging my IP adress. Using the retry mechanism and delay times together, in the last retrieval attempt dated 25/04/2025, I was able to retrieve data for 33 out of 34 genres which left out data for only the “Sports & Fitness” genre. This was the most successful attempt and took 49 minutes and 6 seconds. Additionally, to prevent the context of search keywords and retrieving data of non-movies, I added the keyword “movies” to the end of the genre names retrieved from the Rotten Tomatoes dataset. 
