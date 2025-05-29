@@ -5,3 +5,5 @@ matplotlib
 pytrends
 scipy
 requests
+sklearn
+math
