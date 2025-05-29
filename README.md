@@ -2,7 +2,11 @@
 
 This project aims to analyze how seasonal trends and critic/audience opinions affect movies' popularity and box office value. Along with the relationship seasonal increase/decrease in certain genres (as an example: spike in popularity for holiday movies during the period between Christmas - New Years), there will also be comparison between the relation between general audience rating vs critics' rating and how high the revenue of the movie is. 
 
-- [Project Roadmap](##Roadmap)
+- [Motivation](#Motivation)
+- [Research Question](#Research-Question)
+- [Hypotheses](#Hypotheses)
+- [Datasets](#Datasets)
+- [Project Roadmap](#Project-Roadmap)
 - [Results](#Results)
 - [Machine Learning](#Machine-Learning)
 - [Limitations & Future Work](#Limitations-challenges-future-work)
@@ -52,7 +56,14 @@ The mentioned features will be collected from the following sources:
 * Rotten Tomatoes: usage of a [Rotten Tomatoes Movies dataset](https://www.kaggle.com/datasets/andrezaza/clapper-massive-rotten-tomatoes-movies-and-reviews?resource=download&select=rotten_tomatoes_movies.csv) imported from Kaggle user Andrea Villa to access title, genre, critic scores (tomatoMeter), audience scores and box office revenue data
     * genre, box office, critic score (tomatoMeter), audience score will be retrieved from Rotten Tomatoes
 
-## Roadmap
+### Data Analysis
+- Tracking popularity of movie trends over time.
+- Determining seasonal trends.
+- Comparing discussions on social media with the success of the movie.
+- Identifying correlations between social media engagement and movie popularity, seasonal trends and movie popularity, critic reviews and movie popularity.
+- Applying regression analysis to predict success of movie in box office and streaming platforms.
+
+## Project Roadmap
 ### 1. Data Collection
 - Kaggle dataset of Rotten Tomatoes movies (their genres, critic & audience scores, box office revenues)
 - Google Trends data of interest per movie genre over the year 2024
@@ -78,14 +89,6 @@ Findings of:
 - Score vs Box Office Revenue
 - Seasonal & Monthly Genre Trends
 ### 8. Limitations & Challenges, Future Work
-
-## Data Analysis
-- Tracking popularity of movie trends over time.
-- Determining seasonal trends.
-- Comparing discussions on social media with the success of the movie.
-- Identifying correlations between social media engagement and movie popularity, seasonal trends and movie popularity, critic reviews and movie popularity.
-- Applying regression analysis to predict success of movie in box office and streaming platforms.
-
 
 # Results
 
