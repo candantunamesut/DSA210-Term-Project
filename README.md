@@ -4,6 +4,7 @@ This project aims to analyze how seasonal trends and critic/audience opinions af
 
 - [Project Roadmap](##Project-Roadmap)
 - [Results](#Results)
+- [Machine Learning](#Machine-Learning)
 - [Limitations & Future Work](#Limitations-challenges-future-work)
 
 ## Motivation
@@ -50,8 +51,6 @@ The mentioned features will be collected from the following sources:
     * interest data trend of certain genres over time will be collected to examine how the popularity of different genres change depending on the season of the year (genres will be imported from the Rotten Tomatoes dataset) 
 * Rotten Tomatoes: usage of a [Rotten Tomatoes Movies dataset](https://www.kaggle.com/datasets/andrezaza/clapper-massive-rotten-tomatoes-movies-and-reviews?resource=download&select=rotten_tomatoes_movies.csv) imported from Kaggle user Andrea Villa to access title, genre, critic scores (tomatoMeter), audience scores and box office revenue data
     * genre, box office, critic score (tomatoMeter), audience score will be retrieved from Rotten Tomatoes
-
-Additionally, long-short term memory technique will be implemented using an IMDb reviews dataset retrieved on Kaggle (including user-reviews and sentiment-value features). Such data will contribute to showing how reviews and their sentiment value correlate with the other features included in the project (Rotten Tomatoes scores by critics and the audience, seasonal interest on Google etc.)
 
 ## Project Roadmap
 ### 1. Data Collection
@@ -119,10 +118,6 @@ The relationship between audience rating and box office revenue values is statis
 ![image](https://github.com/user-attachments/assets/5ee037f2-cceb-47a6-a672-3f44b5518c37)
 The relationship between critic rating and box office revenue values is also statistically significant according to the result of Pearson Correlation test. Similarly to the audience rating - box office graph, the plot values seem to be even more scattered in all areas of the graph, and it's hard to see a clear trend. This result suggests critic score is not among the significant factors in predicting a movie'S box office success.
 
-
-### Limitations: 
-The dataset originally consisted of over 140k+ movies; and cleaning out empty/missing values for box office, tomatometer and audience rating columns left out 13k+ movies. The great difference between the two values was mainly caused by the amount of rows of movies with no box office revenue data. This led to some of the dataset not being used. Additionally, some of the movies’ box office revenues were low enough to mean that their rating values might not have been accurate. Due to lack of popularity, a small amount of movies’ tomatometer (critic rating) value is 0, which could be tied to no critics reviewing the movie. This can also be said for movies with a small amount of voters which would affect the audience rating value.
-
 ## Seasonal Genre Popularity Trends: 
 
 In order to understand the relationship between seasonal-annual events/days and movie genre popularity, Google Trends’ search popularity data of genres was retrieved using the Python library pytrends. A dataset containing values of over 130 thousand movies, their scores, genres, box office revenue values (and more) scrapped by user Andrea Milla from the website Rotten Tomatoes was retrieved from Kaggle and used in the experiment. The correlation values of both scores were compared with a heatmap to examine if there is indeed any relation. The hypotheses of the experiment were tested using ANOVA. 
@@ -168,5 +163,24 @@ Nature: The nature genre seems to peak in June, start of the summer and the warm
 ![war](https://github.com/user-attachments/assets/547ab875-7688-4255-80cf-e86ea1bca0a3)
 War: Interest in war movies peaking in April could be tied to the majority of war movies that are globally popular take the World War I as their main topic and focus on the American side of the war. Other global events annually aligning with this month could also contribute to this data. 
 
-### Limitations & challenges: 
-The greatest challenge in testing the relation between seasons/annual important dates and movie genres’ popularity was how frequently the system failed to fetch the requested data due to Google Trends’ 429 (TooManyRequests) error. My first approach to discover if there is an existing seasonal trend amongst genres was to request information from Google Trends for every single movie in the Rotten Tomatoes Movies dataset, but this approach proved to be unachievable due to how great the number of movies the dataset consisted of was. I moved on to requesting search data for genres instead, and used the Rotten Tomatoes dataset to create a list of movie genres and fetched data for these genres. Though the number was down from 130k+ to 20-30, the issue still persisted, and I had to move on to a retry based code to ensure I could retrieve data for the most number of genres possible. Genre names had to be cleaned due to special characters and NaN values corrupting data. Despite using the retry based mechanism, I had to improvise using sleep time as well to not overexhaust the system and prevent Trends from flagging my IP adress. Using the retry mechanism and delay times together, in the last retrieval attempt dated 25/04/2025, I was able to retrieve data for 33 out of 34 genres which left out data for only the “Sports & Fitness” genre. This was the most successful attempt and took 49 minutes and 6 seconds. Additionally, to prevent the context of search keywords and retrieving data of non-movies, I added the keyword “movies” to the end of the genre names retrieved from the Rotten Tomatoes dataset. 
+# Machine Learning
+Usage of features like audienceScore, tomatoMeter (critic score), genre, interest (peak popularity of genre) to create a model, testing accuracy to see if the model can predict box office revenue. Added a new feature (gap of critic-audience scores) to examine whether disagreement of audience and critics imply anything about box office revenue.
+- Classification: binary classifier prediction of movies as low vs high box office revenue (higher/lower than median)
+- Regression: predicting box office revenue in dollars
+
+Regression RMSE: 6909439.59 (6.9 Million Dollars) - this value represents how far off the average prediction of the model is from the actual value of box office revenue. 6.9 million is a high value and could be due to the high variation value of the dataset
+
+Classification Accuracy: 0.63 - Model is predicting low/high box office revenue data correctly %63 of the time. %63 signifies that the prediction of the model is better than a completely random guess (of %50 correctness), yet it is not nearly accurate enough. This could be due to the features scores, genre or genre interest are not major predictors of box office revenue as supported by the test results done in the score vs box office revenue part of the project. (Accuracy was found to be %63 using logistic regresssion and %62 using random forest accuracy testing)
+- Used weighted classes to ensure balance in low-high revenue classes.
+- After applying cross validation, the classification accuracy remained nearly the same - we can conclude there is no overfitting. 
+
+## Findings: 
+- As presented in the previous score vs box office data revenue part of the project, critic scores or audience scores are not strongly correlated with box office revenue.
+- Applying machine learning methods such as binary classification, logistic regression, accuracy testing supported this finding; meaning even after including genre, genre interest or gap of critic-audience score features, it can be concluded that these features are not predictors of box office revenue data nor indicators of low or high box office revenue.
+
+## Limitations, Challenges, Future Work
+Score vs box office revenue: The dataset originally consisted of over 140k+ movies; and cleaning out empty/missing values for box office, tomatometer and audience rating columns left out 13k+ movies. The great difference between the two values was mainly caused by the amount of rows of movies with no box office revenue data. This led to some of the dataset not being used. Additionally, some of the movies’ box office revenues were low enough to mean that their rating values might not have been accurate. Due to lack of popularity, a small amount of movies’ tomatometer (critic rating) value is 0, which could be tied to no critics reviewing the movie. This can also be said for movies with a small amount of voters which would affect the audience rating value.
+
+Seasonal trend analysis: The greatest challenge in testing the relation between seasons/annual important dates and movie genres’ popularity was how frequently the system failed to fetch the requested data due to Google Trends’ 429 (TooManyRequests) error. My first approach to discover if there is an existing seasonal trend amongst genres was to request information from Google Trends for every single movie in the Rotten Tomatoes Movies dataset, but this approach proved to be unachievable due to how great the number of movies the dataset consisted of was. I moved on to requesting search data for genres instead, and used the Rotten Tomatoes dataset to create a list of movie genres and fetched data for these genres. Though the number was down from 130k+ to 20-30, the issue still persisted, and I had to move on to a retry based code to ensure I could retrieve data for the most number of genres possible. Genre names had to be cleaned due to special characters and NaN values corrupting data. Despite using the retry based mechanism, I had to improvise using sleep time as well to not overexhaust the system and prevent Trends from flagging my IP adress. Using the retry mechanism and delay times together, in the last retrieval attempt dated 25/04/2025, I was able to retrieve data for 33 out of 34 genres which left out data for only the “Sports & Fitness” genre. This was the most successful attempt and took 49 minutes and 6 seconds. Additionally, to prevent the context of search keywords and retrieving data of non-movies, I added the keyword “movies” to the end of the genre names retrieved from the Rotten Tomatoes dataset. 
+
+Machine learning: sentiment analysis using IMDB reviews of movies was planned in the beginning of the project timeline, yet I wasn't able to attach/merge the data to the existing datasets due to the lack of features of the dataset (it was consisting of only reviews and their sentiments but lacked an identification feature like movie, genre, movie id, etc...). 
