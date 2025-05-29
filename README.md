@@ -7,19 +7,19 @@ Content:
 - [Research Questions](##Research-Questions:)
 - [Hypotheses](##Hypotheses:)
 - [Datasets](##Datasets)
-- [Roadmap](##Project-Roadmap)
+- [Project Roadmap](##Project-Roadmap)
 - [Results](#Results)
 - [Limitations & Future Work](#Limitations-challenges-future-work)
 
 ## Motivation
 With the increased digitalization of the world, online streaming platforms have become a major source for streaming movies and series and are considered to have replaced the physical streaming (cinemas/box office) industry. Digitalization has also contributed to social media spaces majorly being the host platforms for discussions and generating engagament for visual media like movies and series. Since movies' and their online discussion spaces are personal interests of mine, I intend to question some of the major factors affecting movies' popularity and plan to focus on the global annual calendar/major events along with online engagement on search engines.
 
-##Research Questions:
+## Research Questions:
 Aiming to answer questions like:
 - To what extent do seasonal trends and annual events (Halloween, Christmas, summer and winter breaks for students) affect the popularity of certain genres of movies based on search engine data?
 - To what extent do critic ratings and general public opinion (rating) correlate with a movie's box office revenue? Which rating is more indicative of box office success?
 
-##Hypotheses:
+## Hypotheses:
 ### Critic score (tomatoMeter) & box office revenue:
 H0: There is no significant relationship between critic score and box office revenue.
 
@@ -93,7 +93,7 @@ Findings of:
 - Applying regression analysis to predict success of movie in box office and streaming platforms.
 
 
-# Results, Limitations and Challenges
+# Results
 
 ## Critic & Audience Scores’ Relation with Box Office Revenue:
 
