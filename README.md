@@ -181,6 +181,17 @@ Classification Accuracy: 0.63 - Model is predicting low/high box office revenue 
 - As presented in the previous score vs box office data revenue part of the project, critic scores or audience scores are not strongly correlated with box office revenue.
 - Applying machine learning methods such as binary classification, logistic regression, accuracy testing supported this finding; meaning even after including genre, genre interest or gap of critic-audience score features, it can be concluded that these features are not predictors of box office revenue data nor indicators of low or high box office revenue.
 
+## Visualization
+![RF Regression Actual-Predicted](https://github.com/user-attachments/assets/03b0fe5c-9ad5-4873-84b6-13b7317d5e54)
+Random Forest Regression - Actual vs Predicted values of Box Office Revenue: Dense clustering near the 0 mark on the X axis (actual box office revenue values are densely clustered closer to 0 dollars) indicating that most of the movies in the dataset have low box office revenue. This is to be expected due to real life distribution where not many movies show huge box office success. It might also mean that the model might perform poorly when it comes to movies with overly high box office revenue (outliers) due to the heavy clustering on the opposite side. 
+
+![Confusion Matrix](https://github.com/user-attachments/assets/dc708bad-b5fd-47d1-8667-ad6ed1bc8db1)
+Confusion Matrix (using Heatmap): Ranking and distribution of importance of features show that out of all the features inclduded in the model, the best predictor of box office revenue was the gap of scores feature created by merging critic and audience score features during the feature engineering process. It was followed by critic scores and audience scores yet there is not big enough of a difference between these values to conclude that one of them is greatly better at predicting box office revenue compared to the other. 
+
+![Feature Importance](https://github.com/user-attachments/assets/a48a3391-836b-4462-8737-b4cacf086983)
+Importance of Features (gap of scores, critic score, audience score, genres...): The model was better with classifying lower earning movies compared to higher revenue outlier
+
+
 ## Limitations, Challenges, Future Work
 Score vs box office revenue: The dataset originally consisted of over 140k+ movies; and cleaning out empty/missing values for box office, tomatometer and audience rating columns left out 13k+ movies. The great difference between the two values was mainly caused by the amount of rows of movies with no box office revenue data. This led to some of the dataset not being used. Additionally, some of the movies’ box office revenues were low enough to mean that their rating values might not have been accurate. Due to lack of popularity, a small amount of movies’ tomatometer (critic rating) value is 0, which could be tied to no critics reviewing the movie. This can also be said for movies with a small amount of voters which would affect the audience rating value.
 
