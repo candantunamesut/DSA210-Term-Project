@@ -103,7 +103,7 @@ P-value was found to be:
 
 Comparing these values with α = 0.05: we can reject the null hypothesis for both the audience score-box office revenue test and the critic score-box office test. There is a statistically significant relationship between audience rating and box office revenue and between critic scores and box office revenue.
 
-[heatmap_correlation_boxoffice](https://github.com/user-attachments/assets/3a972e13-9b7d-4f03-bdca-37f59dd3b837)
+![heatmap_correlation_boxoffice](https://github.com/user-attachments/assets/90d98dbf-f2b6-4cf2-b4cb-5b1c37634140)
 
 Pearson correlation was found to be:
 - Between audience score & box office revenue: -0.0901669691353097
@@ -138,7 +138,7 @@ Ha: There is a significant difference in popularity of genres across seasons.
 - We cannot reject the null hypothesis for the following genres: Drama, Gay/Lesbian, Crime, Kids & Family and Special Interest. For these genres, there is no significant difference in popularity across seasons.
 
 #### Monthly: 
-![heatmapMonthly](https://github.com/user-attachments/assets/36a0d2d9-ff7b-4602-a743-9669dd849678)
+![heatmapMonthly](https://github.com/user-attachments/assets/82eff270-41e8-4c2f-b4fc-009ef167dfc2)
 
 H0: There is no significant difference in popularity of genres across months.
 
