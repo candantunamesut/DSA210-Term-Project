@@ -49,6 +49,33 @@ The mentioned features will be collected from the following sources:
 
 Additionally, long-short term memory technique will be implemented using an IMDb reviews dataset retrieved on Kaggle (including user-reviews and sentiment-value features). Such data will contribute to showing how reviews and their sentiment value correlate with the other features included in the project (Rotten Tomatoes scores by critics and the audience, seasonal interest on Google etc.)
 
+## Project Roadmap
+### 1. Data Collection
+- Kaggle dataset of Rotten Tomatoes movies (their genres, critic & audience scores, box office revenues)
+- Google Trends data of interest per movie genre over the year 2024
+### 2. Dataset Cleaning & Organization
+Removed rows with missing data, merging and transformation of data as needed
+### 3. Exploratory Data Analysis
+- Correlation heatmaps
+- Seasonal grouping (from months to seasons)
+- Time plots, distribution plot
+### 4. Hypothesis Testing
+- ANOVA for seasonal/monthly genre trend analysis
+- Pearson Correlation for box office over critic & audience scores
+### 5. Visualization
+- Scatterplot of distribution of box office over score & regression line
+- Time plot of monthly interest of genres significantly influenced by seasonal trends or annual events
+### 6. Machine Learning
+- Feature engineering to create and transform features
+- Random Forest Classification (classifying box office revenue as low vs high)
+- Random Forest Regression (predicting box office revenue)
+- Accuracy analysis of models + conclusion
+### 7. Results
+Findings of:
+- Score vs Box Office Revenue
+- Seasonal & Monthly Genre Trends
+### 8. Limitations & Challenges, Future Work
+
 ## Data Analysis
 - Tracking popularity of movie trends over time.
 - Determining seasonal trends.
