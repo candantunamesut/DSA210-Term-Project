@@ -3,7 +3,7 @@
 This project aims to analyze how seasonal trends and critic/audience opinions affect movies' popularity and box office value. Along with the relationship seasonal increase/decrease in certain genres (as an example: spike in popularity for holiday movies during the period between Christmas - New Years), there will also be comparison between the relation between general audience rating vs critics' rating and how high the revenue of the movie is. 
 
 - [Motivation](#Motivation)
-- [Research Question](#Research-Question)
+- [Research Questions](#Research-Questions)
 - [Hypotheses](#Hypotheses)
 - [Datasets](#Datasets)
 - [Project Roadmap](#Project-Roadmap)
