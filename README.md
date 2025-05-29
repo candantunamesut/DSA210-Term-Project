@@ -103,7 +103,7 @@ P-value was found to be:
 
 Comparing these values with α = 0.05: we can reject the null hypothesis for both the audience score-box office revenue test and the critic score-box office test. There is a statistically significant relationship between audience rating and box office revenue and between critic scores and box office revenue.
 
-heatmap_correlation_boxoffice](https://github.com/user-attachments/assets/3a972e13-9b7d-4f03-bdca-37f59dd3b837)
+[heatmap_correlation_boxoffice](https://github.com/user-attachments/assets/3a972e13-9b7d-4f03-bdca-37f59dd3b837)
 
 Pearson correlation was found to be:
 - Between audience score & box office revenue: -0.0901669691353097
