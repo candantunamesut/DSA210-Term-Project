@@ -97,18 +97,19 @@ Findings of:
 In order to understand if a movie’s ratings correlate with how high their box office revenue (in dollars) is, two scores -one being the average of multiple critics and the other one that represents the general audiences’ opinion- on the movie were compared to see if either show any relation. A dataset containing values of over 130 thousand movies, their scores, genres, box office revenue values (and more) scrapped by user Andrea Milla from the website Rotten Tomatoes was retrieved from Kaggle and used in the experiment. The correlation values of both scores were compared with a heatmap to examine if there is indeed any relation. The hypotheses of the experiment were tested using Pearson Correlation. The scatterplots of both comparisons were saved as png files, along with the correlation heatmap of the three data features and can be found in the results folder.
 
 ### Results: 
+P-value was found to be:
+- For audience score & box office revenue: 1.248400337443627e-20
+- For critic score & box office revenue: 5.145165271420907e-144
+
+Comparing these values with α = 0.05: we can reject the null hypothesis for both the audience score-box office revenue test and the critic score-box office test. There is a statistically significant relationship between audience rating and box office revenue and between critic scores and box office revenue.
+
+heatmap_correlation_boxoffice](https://github.com/user-attachments/assets/3a972e13-9b7d-4f03-bdca-37f59dd3b837)
 
 Pearson correlation was found to be:
 - Between audience score & box office revenue: -0.0901669691353097
     - which means there is a very weak negative correlation between the two values.
 - Between critic score & box office revenue: -0.24415258620083363
     - which means there is a weak negative correlation between the two values.
-
-P-value was found to be:
-- For audience score & box office revenue: 1.248400337443627e-20
-- For critic score & box office revenue: 5.145165271420907e-144
-
-Comparing these values with α = 0.05: we can reject the null hypothesis for both the audience score-box office revenue test and the critic score-box office test. There is a statistically significant relationship between audience rating and box office revenue and between critic scores and box office revenue.
 
 Additionally, on the correlation heatmap, we can observe the pearson correlation between audience score and critic score to be 0.58: which indicates a strong positive correlation between the two values. 
 
@@ -137,6 +138,8 @@ Ha: There is a significant difference in popularity of genres across seasons.
 - We cannot reject the null hypothesis for the following genres: Drama, Gay/Lesbian, Crime, Kids & Family and Special Interest. For these genres, there is no significant difference in popularity across seasons.
 
 #### Monthly: 
+![heatmapMonthly](https://github.com/user-attachments/assets/36a0d2d9-ff7b-4602-a743-9669dd849678)
+
 H0: There is no significant difference in popularity of genres across months.
 
 Ha: There is a significant difference in popularity of genres across months.
@@ -173,9 +176,13 @@ Usage of features like audienceScore, tomatoMeter (critic score), genre, interes
 
 Regression RMSE: 6909439.59 (6.9 Million Dollars) - this value represents how far off the average prediction of the model is from the actual value of box office revenue. 6.9 million is a high value and could be due to the high variation value of the dataset
 
+Precision: 0.63
+Recall: 0.63
+F1 Score: 0.63
+
 Classification Accuracy: 0.63 - Model is predicting low/high box office revenue data correctly %63 of the time. %63 signifies that the prediction of the model is better than a completely random guess (of %50 correctness), yet it is not nearly accurate enough. This could be due to the features scores, genre or genre interest are not major predictors of box office revenue as supported by the test results done in the score vs box office revenue part of the project. (Accuracy was found to be %63 using logistic regresssion and %62 using random forest accuracy testing)
 - Used weighted classes to ensure balance in low-high revenue classes.
-- After applying cross validation, the classification accuracy remained nearly the same - we can conclude there is no overfitting. 
+- After applying cross validation, the classification accuracy remained nearly the same - we can conclude there is no overfitting.
 
 ## Findings: 
 - As presented in the previous score vs box office data revenue part of the project, critic scores or audience scores are not strongly correlated with box office revenue.
@@ -189,8 +196,7 @@ Random Forest Regression - Actual vs Predicted values of Box Office Revenue: Den
 Confusion Matrix (using Heatmap): Ranking and distribution of importance of features show that out of all the features inclduded in the model, the best predictor of box office revenue was the gap of scores feature created by merging critic and audience score features during the feature engineering process. It was followed by critic scores and audience scores yet there is not big enough of a difference between these values to conclude that one of them is greatly better at predicting box office revenue compared to the other. 
 
 ![Feature Importance](https://github.com/user-attachments/assets/a48a3391-836b-4462-8737-b4cacf086983)
-Importance of Features (gap of scores, critic score, audience score, genres...): The model was better with classifying lower earning movies compared to higher revenue outlier
-
+Importance of Features (gap of scores, critic score, audience score, genres...): True Positive (597): 597 high box office predictions were high in observation as well. True Negatives (590): 590 low box office predictions were low in observation as well.  False Positives (361): 361 high box office predictions that were actually low in observation. False Negatives (360): 360 low box office predictions that were actually high in observation. The model identified movies more correctly than not (0.62-0.63). We can also note that the model was slightly better with classifying lower earning movies compared to higher revenue movies (outliers).
 
 ## Limitations, Challenges, Future Work
 Score vs box office revenue: The dataset originally consisted of over 140k+ movies; and cleaning out empty/missing values for box office, tomatometer and audience rating columns left out 13k+ movies. The great difference between the two values was mainly caused by the amount of rows of movies with no box office revenue data. This led to some of the dataset not being used. Additionally, some of the movies’ box office revenues were low enough to mean that their rating values might not have been accurate. Due to lack of popularity, a small amount of movies’ tomatometer (critic rating) value is 0, which could be tied to no critics reviewing the movie. This can also be said for movies with a small amount of voters which would affect the audience rating value.
